@@ -1,0 +1,1262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://model.oms.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://model.oms.com" xmlns:intf="http://model.oms.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://model.oms.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="setShift">
+    <complexType>
+     <sequence>
+      <element name="shift" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setShiftResponse">
+    <complexType/>
+   </element>
+   <element name="getShift">
+    <complexType/>
+   </element>
+   <element name="getShiftResponse">
+    <complexType>
+     <sequence>
+      <element name="getShiftReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getDuration">
+    <complexType/>
+   </element>
+   <element name="getDurationResponse">
+    <complexType>
+     <sequence>
+      <element name="getDurationReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getProjectType">
+    <complexType/>
+   </element>
+   <element name="getProjectTypeResponse">
+    <complexType>
+     <sequence>
+      <element name="getProjectTypeReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setAssignDate">
+    <complexType>
+     <sequence>
+      <element name="assignDate" type="xsd:dateTime"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setAssignDateResponse">
+    <complexType/>
+   </element>
+   <element name="getExpCompletionDate">
+    <complexType/>
+   </element>
+   <element name="getExpCompletionDateResponse">
+    <complexType>
+     <sequence>
+      <element name="getExpCompletionDateReturn" type="xsd:dateTime"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setExpCompletionDate">
+    <complexType>
+     <sequence>
+      <element name="expCompletionDate" type="xsd:dateTime"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setExpCompletionDateResponse">
+    <complexType/>
+   </element>
+   <element name="getAssignDate">
+    <complexType/>
+   </element>
+   <element name="getAssignDateResponse">
+    <complexType>
+     <sequence>
+      <element name="getAssignDateReturn" type="xsd:dateTime"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setProjectType">
+    <complexType>
+     <sequence>
+      <element name="projectType" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setProjectTypeResponse">
+    <complexType/>
+   </element>
+   <element name="setManagerName">
+    <complexType>
+     <sequence>
+      <element name="managerName" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setManagerNameResponse">
+    <complexType/>
+   </element>
+   <element name="getManagerName">
+    <complexType/>
+   </element>
+   <element name="getManagerNameResponse">
+    <complexType>
+     <sequence>
+      <element name="getManagerNameReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setEmployeeName">
+    <complexType>
+     <sequence>
+      <element name="employeeName" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setEmployeeNameResponse">
+    <complexType/>
+   </element>
+   <element name="getEmployeeName">
+    <complexType/>
+   </element>
+   <element name="getEmployeeNameResponse">
+    <complexType>
+     <sequence>
+      <element name="getEmployeeNameReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setEmployeeId">
+    <complexType>
+     <sequence>
+      <element name="employeeId" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setEmployeeIdResponse">
+    <complexType/>
+   </element>
+   <element name="getManagerUnAvail">
+    <complexType/>
+   </element>
+   <element name="getManagerUnAvailResponse">
+    <complexType>
+     <sequence>
+      <element name="getManagerUnAvailReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setManagerUnAvail">
+    <complexType>
+     <sequence>
+      <element name="managerUnAvail" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setManagerUnAvailResponse">
+    <complexType/>
+   </element>
+   <element name="getEmployeeId">
+    <complexType/>
+   </element>
+   <element name="getEmployeeIdResponse">
+    <complexType>
+     <sequence>
+      <element name="getEmployeeIdReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setManagerId">
+    <complexType>
+     <sequence>
+      <element name="managerId" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setManagerIdResponse">
+    <complexType/>
+   </element>
+   <element name="getProjectId">
+    <complexType/>
+   </element>
+   <element name="getProjectIdResponse">
+    <complexType>
+     <sequence>
+      <element name="getProjectIdReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setProjectId">
+    <complexType>
+     <sequence>
+      <element name="projectId" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setProjectIdResponse">
+    <complexType/>
+   </element>
+   <element name="setDuration">
+    <complexType>
+     <sequence>
+      <element name="duration" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setDurationResponse">
+    <complexType/>
+   </element>
+   <element name="getManagerId">
+    <complexType/>
+   </element>
+   <element name="getManagerIdResponse">
+    <complexType>
+     <sequence>
+      <element name="getManagerIdReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="getManagerIdResponse">
+
+      <wsdl:part element="impl:getManagerIdResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getShiftRequest">
+
+      <wsdl:part element="impl:getShift" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setShiftResponse">
+
+      <wsdl:part element="impl:setShiftResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getManagerNameResponse">
+
+      <wsdl:part element="impl:getManagerNameResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setAssignDateRequest">
+
+      <wsdl:part element="impl:setAssignDate" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setProjectIdRequest">
+
+      <wsdl:part element="impl:setProjectId" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setExpCompletionDateRequest">
+
+      <wsdl:part element="impl:setExpCompletionDate" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getAssignDateResponse">
+
+      <wsdl:part element="impl:getAssignDateResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getProjectTypeRequest">
+
+      <wsdl:part element="impl:getProjectType" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setEmployeeIdResponse">
+
+      <wsdl:part element="impl:setEmployeeIdResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getDurationResponse">
+
+      <wsdl:part element="impl:getDurationResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getManagerUnAvailRequest">
+
+      <wsdl:part element="impl:getManagerUnAvail" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setEmployeeIdRequest">
+
+      <wsdl:part element="impl:setEmployeeId" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setShiftRequest">
+
+      <wsdl:part element="impl:setShift" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setDurationResponse">
+
+      <wsdl:part element="impl:setDurationResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setDurationRequest">
+
+      <wsdl:part element="impl:setDuration" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setExpCompletionDateResponse">
+
+      <wsdl:part element="impl:setExpCompletionDateResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getAssignDateRequest">
+
+      <wsdl:part element="impl:getAssignDate" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getEmployeeNameResponse">
+
+      <wsdl:part element="impl:getEmployeeNameResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getProjectIdResponse">
+
+      <wsdl:part element="impl:getProjectIdResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setProjectTypeRequest">
+
+      <wsdl:part element="impl:setProjectType" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getExpCompletionDateRequest">
+
+      <wsdl:part element="impl:getExpCompletionDate" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getEmployeeNameRequest">
+
+      <wsdl:part element="impl:getEmployeeName" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setManagerNameRequest">
+
+      <wsdl:part element="impl:setManagerName" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getExpCompletionDateResponse">
+
+      <wsdl:part element="impl:getExpCompletionDateResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getManagerNameRequest">
+
+      <wsdl:part element="impl:getManagerName" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setEmployeeNameResponse">
+
+      <wsdl:part element="impl:setEmployeeNameResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getManagerIdRequest">
+
+      <wsdl:part element="impl:getManagerId" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getEmployeeIdRequest">
+
+      <wsdl:part element="impl:getEmployeeId" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setEmployeeNameRequest">
+
+      <wsdl:part element="impl:setEmployeeName" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getProjectIdRequest">
+
+      <wsdl:part element="impl:getProjectId" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getProjectTypeResponse">
+
+      <wsdl:part element="impl:getProjectTypeResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getEmployeeIdResponse">
+
+      <wsdl:part element="impl:getEmployeeIdResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setManagerUnAvailResponse">
+
+      <wsdl:part element="impl:setManagerUnAvailResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setManagerNameResponse">
+
+      <wsdl:part element="impl:setManagerNameResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getShiftResponse">
+
+      <wsdl:part element="impl:getShiftResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setManagerUnAvailRequest">
+
+      <wsdl:part element="impl:setManagerUnAvail" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setProjectIdResponse">
+
+      <wsdl:part element="impl:setProjectIdResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setAssignDateResponse">
+
+      <wsdl:part element="impl:setAssignDateResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setManagerIdRequest">
+
+      <wsdl:part element="impl:setManagerId" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getDurationRequest">
+
+      <wsdl:part element="impl:getDuration" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setManagerIdResponse">
+
+      <wsdl:part element="impl:setManagerIdResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setProjectTypeResponse">
+
+      <wsdl:part element="impl:setProjectTypeResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getManagerUnAvailResponse">
+
+      <wsdl:part element="impl:getManagerUnAvailResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="DisplayWorkAllocationTO">
+
+      <wsdl:operation name="setShift">
+
+         <wsdl:input message="impl:setShiftRequest" name="setShiftRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setShiftResponse" name="setShiftResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getShift">
+
+         <wsdl:input message="impl:getShiftRequest" name="getShiftRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getShiftResponse" name="getShiftResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getDuration">
+
+         <wsdl:input message="impl:getDurationRequest" name="getDurationRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getDurationResponse" name="getDurationResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getProjectType">
+
+         <wsdl:input message="impl:getProjectTypeRequest" name="getProjectTypeRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getProjectTypeResponse" name="getProjectTypeResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setAssignDate">
+
+         <wsdl:input message="impl:setAssignDateRequest" name="setAssignDateRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setAssignDateResponse" name="setAssignDateResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getExpCompletionDate">
+
+         <wsdl:input message="impl:getExpCompletionDateRequest" name="getExpCompletionDateRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getExpCompletionDateResponse" name="getExpCompletionDateResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setExpCompletionDate">
+
+         <wsdl:input message="impl:setExpCompletionDateRequest" name="setExpCompletionDateRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setExpCompletionDateResponse" name="setExpCompletionDateResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getAssignDate">
+
+         <wsdl:input message="impl:getAssignDateRequest" name="getAssignDateRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getAssignDateResponse" name="getAssignDateResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setProjectType">
+
+         <wsdl:input message="impl:setProjectTypeRequest" name="setProjectTypeRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setProjectTypeResponse" name="setProjectTypeResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setManagerName">
+
+         <wsdl:input message="impl:setManagerNameRequest" name="setManagerNameRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setManagerNameResponse" name="setManagerNameResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getManagerName">
+
+         <wsdl:input message="impl:getManagerNameRequest" name="getManagerNameRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getManagerNameResponse" name="getManagerNameResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setEmployeeName">
+
+         <wsdl:input message="impl:setEmployeeNameRequest" name="setEmployeeNameRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setEmployeeNameResponse" name="setEmployeeNameResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getEmployeeName">
+
+         <wsdl:input message="impl:getEmployeeNameRequest" name="getEmployeeNameRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getEmployeeNameResponse" name="getEmployeeNameResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setEmployeeId">
+
+         <wsdl:input message="impl:setEmployeeIdRequest" name="setEmployeeIdRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setEmployeeIdResponse" name="setEmployeeIdResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getManagerUnAvail">
+
+         <wsdl:input message="impl:getManagerUnAvailRequest" name="getManagerUnAvailRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getManagerUnAvailResponse" name="getManagerUnAvailResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setManagerUnAvail">
+
+         <wsdl:input message="impl:setManagerUnAvailRequest" name="setManagerUnAvailRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setManagerUnAvailResponse" name="setManagerUnAvailResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getEmployeeId">
+
+         <wsdl:input message="impl:getEmployeeIdRequest" name="getEmployeeIdRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getEmployeeIdResponse" name="getEmployeeIdResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setManagerId">
+
+         <wsdl:input message="impl:setManagerIdRequest" name="setManagerIdRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setManagerIdResponse" name="setManagerIdResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getProjectId">
+
+         <wsdl:input message="impl:getProjectIdRequest" name="getProjectIdRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getProjectIdResponse" name="getProjectIdResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setProjectId">
+
+         <wsdl:input message="impl:setProjectIdRequest" name="setProjectIdRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setProjectIdResponse" name="setProjectIdResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setDuration">
+
+         <wsdl:input message="impl:setDurationRequest" name="setDurationRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setDurationResponse" name="setDurationResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getManagerId">
+
+         <wsdl:input message="impl:getManagerIdRequest" name="getManagerIdRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getManagerIdResponse" name="getManagerIdResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="DisplayWorkAllocationTOSoapBinding" type="impl:DisplayWorkAllocationTO">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="setShift">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setShiftRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setShiftResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getShift">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getShiftRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getShiftResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getDuration">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getDurationRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getDurationResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getProjectType">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getProjectTypeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getProjectTypeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setAssignDate">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setAssignDateRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setAssignDateResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getExpCompletionDate">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getExpCompletionDateRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getExpCompletionDateResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setExpCompletionDate">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setExpCompletionDateRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setExpCompletionDateResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getAssignDate">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getAssignDateRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getAssignDateResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setProjectType">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setProjectTypeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setProjectTypeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setManagerName">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setManagerNameRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setManagerNameResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getManagerName">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getManagerNameRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getManagerNameResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setEmployeeName">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setEmployeeNameRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setEmployeeNameResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getEmployeeName">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getEmployeeNameRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getEmployeeNameResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setEmployeeId">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setEmployeeIdRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setEmployeeIdResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getManagerUnAvail">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getManagerUnAvailRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getManagerUnAvailResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setManagerUnAvail">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setManagerUnAvailRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setManagerUnAvailResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getEmployeeId">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getEmployeeIdRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getEmployeeIdResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setManagerId">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setManagerIdRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setManagerIdResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getProjectId">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getProjectIdRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getProjectIdResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setProjectId">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setProjectIdRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setProjectIdResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setDuration">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setDurationRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setDurationResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getManagerId">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getManagerIdRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getManagerIdResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="DisplayWorkAllocationTOService">
+
+      <wsdl:port binding="impl:DisplayWorkAllocationTOSoapBinding" name="DisplayWorkAllocationTO">
+
+         <wsdlsoap:address location="http://localhost:8089/OfficeManagementSystem/services/DisplayWorkAllocationTO"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

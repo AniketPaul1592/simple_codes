@@ -1,0 +1,81 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from DisplayWorkAllocationTOService WSDL service -->
+
+  <service name="DisplayWorkAllocationTO" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://model.oms.com"/>
+      <parameter name="wsdlServiceElement" value="DisplayWorkAllocationTOService"/>
+      <parameter name="schemaQualified" value="http://model.oms.com"/>
+      <parameter name="wsdlServicePort" value="DisplayWorkAllocationTO"/>
+      <parameter name="className" value="com.oms.model.DisplayWorkAllocationTOSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="DisplayWorkAllocationTO"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="setShift" qname="operNS:setShift" xmlns:operNS="http://model.oms.com" soapAction="" >
+        <parameter qname="pns:shift" xmlns:pns="http://model.oms.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getShift" qname="operNS:getShift" xmlns:operNS="http://model.oms.com" returnQName="retNS:getShiftReturn" xmlns:retNS="http://model.oms.com" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="getDuration" qname="operNS:getDuration" xmlns:operNS="http://model.oms.com" returnQName="retNS:getDurationReturn" xmlns:retNS="http://model.oms.com" returnType="rtns:int" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="getProjectType" qname="operNS:getProjectType" xmlns:operNS="http://model.oms.com" returnQName="retNS:getProjectTypeReturn" xmlns:retNS="http://model.oms.com" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="setAssignDate" qname="operNS:setAssignDate" xmlns:operNS="http://model.oms.com" soapAction="" >
+        <parameter qname="pns:assignDate" xmlns:pns="http://model.oms.com" type="tns:dateTime" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getExpCompletionDate" qname="operNS:getExpCompletionDate" xmlns:operNS="http://model.oms.com" returnQName="retNS:getExpCompletionDateReturn" xmlns:retNS="http://model.oms.com" returnType="rtns:dateTime" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="setExpCompletionDate" qname="operNS:setExpCompletionDate" xmlns:operNS="http://model.oms.com" soapAction="" >
+        <parameter qname="pns:expCompletionDate" xmlns:pns="http://model.oms.com" type="tns:dateTime" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getAssignDate" qname="operNS:getAssignDate" xmlns:operNS="http://model.oms.com" returnQName="retNS:getAssignDateReturn" xmlns:retNS="http://model.oms.com" returnType="rtns:dateTime" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="setProjectType" qname="operNS:setProjectType" xmlns:operNS="http://model.oms.com" soapAction="" >
+        <parameter qname="pns:projectType" xmlns:pns="http://model.oms.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="setManagerName" qname="operNS:setManagerName" xmlns:operNS="http://model.oms.com" soapAction="" >
+        <parameter qname="pns:managerName" xmlns:pns="http://model.oms.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getManagerName" qname="operNS:getManagerName" xmlns:operNS="http://model.oms.com" returnQName="retNS:getManagerNameReturn" xmlns:retNS="http://model.oms.com" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="setEmployeeName" qname="operNS:setEmployeeName" xmlns:operNS="http://model.oms.com" soapAction="" >
+        <parameter qname="pns:employeeName" xmlns:pns="http://model.oms.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getEmployeeName" qname="operNS:getEmployeeName" xmlns:operNS="http://model.oms.com" returnQName="retNS:getEmployeeNameReturn" xmlns:retNS="http://model.oms.com" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="setEmployeeId" qname="operNS:setEmployeeId" xmlns:operNS="http://model.oms.com" soapAction="" >
+        <parameter qname="pns:employeeId" xmlns:pns="http://model.oms.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getManagerUnAvail" qname="operNS:getManagerUnAvail" xmlns:operNS="http://model.oms.com" returnQName="retNS:getManagerUnAvailReturn" xmlns:retNS="http://model.oms.com" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="setManagerUnAvail" qname="operNS:setManagerUnAvail" xmlns:operNS="http://model.oms.com" soapAction="" >
+        <parameter qname="pns:managerUnAvail" xmlns:pns="http://model.oms.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getEmployeeId" qname="operNS:getEmployeeId" xmlns:operNS="http://model.oms.com" returnQName="retNS:getEmployeeIdReturn" xmlns:retNS="http://model.oms.com" returnType="rtns:int" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="setManagerId" qname="operNS:setManagerId" xmlns:operNS="http://model.oms.com" soapAction="" >
+        <parameter qname="pns:managerId" xmlns:pns="http://model.oms.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getProjectId" qname="operNS:getProjectId" xmlns:operNS="http://model.oms.com" returnQName="retNS:getProjectIdReturn" xmlns:retNS="http://model.oms.com" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="setProjectId" qname="operNS:setProjectId" xmlns:operNS="http://model.oms.com" soapAction="" >
+        <parameter qname="pns:projectId" xmlns:pns="http://model.oms.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="setDuration" qname="operNS:setDuration" xmlns:operNS="http://model.oms.com" soapAction="" >
+        <parameter qname="pns:duration" xmlns:pns="http://model.oms.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getManagerId" qname="operNS:getManagerId" xmlns:operNS="http://model.oms.com" returnQName="retNS:getManagerIdReturn" xmlns:retNS="http://model.oms.com" returnType="rtns:int" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <parameter name="allowedMethods" value="setManagerUnAvail setExpCompletionDate getProjectType getExpCompletionDate getManagerName getAssignDate getManagerUnAvail getDuration setDuration setAssignDate setManagerId setEmployeeName setManagerName getManagerId getEmployeeId setProjectId setEmployeeId setShift getShift getEmployeeName setProjectType getProjectId"/>
+
+  </service>
+</deployment>

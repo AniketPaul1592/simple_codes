@@ -1,0 +1,106 @@
+<ns1:deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java" xmlns:ns1="http://xml.apache.org/axis/wsdd/">
+ <ns1:globalConfiguration>
+  <ns1:parameter name="sendMultiRefs" value="true"/>
+  <ns1:parameter name="disablePrettyXML" value="true"/>
+  <ns1:parameter name="adminPassword" value="admin"/>
+  <ns1:parameter name="attachments.Directory" value="D:\OMS_workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\OfficeManagementSystem\WEB-INF\attachments"/>
+  <ns1:parameter name="dotNetSoapEncFix" value="true"/>
+  <ns1:parameter name="enableNamespacePrefixOptimization" value="false"/>
+  <ns1:parameter name="sendXMLDeclaration" value="true"/>
+  <ns1:parameter name="sendXsiTypes" value="true"/>
+  <ns1:parameter name="attachments.implementation" value="org.apache.axis.attachments.AttachmentsImpl"/>
+  <ns1:requestFlow>
+   <ns1:handler type="java:org.apache.axis.handlers.JWSHandler">
+    <ns1:parameter name="scope" value="session"/>
+   </ns1:handler>
+   <ns1:handler type="java:org.apache.axis.handlers.JWSHandler">
+    <ns1:parameter name="scope" value="request"/>
+    <ns1:parameter name="extension" value=".jwr"/>
+   </ns1:handler>
+  </ns1:requestFlow>
+ </ns1:globalConfiguration>
+ <ns1:handler name="URLMapper" type="java:org.apache.axis.handlers.http.URLMapper"/>
+ <ns1:handler name="LocalResponder" type="java:org.apache.axis.transport.local.LocalResponder"/>
+ <ns1:handler name="Authenticate" type="java:org.apache.axis.handlers.SimpleAuthenticationHandler"/>
+ <ns1:service name="AdminService" provider="java:MSG">
+  <ns1:parameter name="allowedMethods" value="AdminService"/>
+  <ns1:parameter name="enableRemoteAdmin" value="false"/>
+  <ns1:parameter name="className" value="org.apache.axis.utils.Admin"/>
+  <ns1:namespace>http://xml.apache.org/axis/wsdd/</ns1:namespace>
+ </ns1:service>
+ <ns1:service name="Version" provider="java:RPC">
+  <ns1:parameter name="allowedMethods" value="getVersion"/>
+  <ns1:parameter name="className" value="org.apache.axis.Version"/>
+ </ns1:service>
+ <ns1:service name="DisplayWorkAllocationTO" provider="java:RPC" style="wrapped" use="literal">
+  <ns2:operation name="setShift" qname="ns1:setShift" soapAction="" xmlns:ns1="http://model.oms.com" xmlns:ns2="http://xml.apache.org/axis/wsdd/">
+   <ns2:parameter qname="ns1:shift" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  </ns2:operation>
+  <ns1:operation name="getShift" qname="ns2:getShift" returnQName="ns2:getShiftReturn" returnType="xsd:string" soapAction="" xmlns:ns2="http://model.oms.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:operation name="getDuration" qname="ns3:getDuration" returnQName="ns3:getDurationReturn" returnType="xsd:int" soapAction="" xmlns:ns3="http://model.oms.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:operation name="getProjectType" qname="ns4:getProjectType" returnQName="ns4:getProjectTypeReturn" returnType="xsd:string" soapAction="" xmlns:ns4="http://model.oms.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:operation name="setAssignDate" qname="ns5:setAssignDate" soapAction="" xmlns:ns5="http://model.oms.com">
+   <ns1:parameter qname="ns5:assignDate" type="xsd:dateTime" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  </ns1:operation>
+  <ns1:operation name="getExpCompletionDate" qname="ns6:getExpCompletionDate" returnQName="ns6:getExpCompletionDateReturn" returnType="xsd:dateTime" soapAction="" xmlns:ns6="http://model.oms.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:operation name="setExpCompletionDate" qname="ns7:setExpCompletionDate" soapAction="" xmlns:ns7="http://model.oms.com">
+   <ns1:parameter qname="ns7:expCompletionDate" type="xsd:dateTime" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  </ns1:operation>
+  <ns1:operation name="getAssignDate" qname="ns8:getAssignDate" returnQName="ns8:getAssignDateReturn" returnType="xsd:dateTime" soapAction="" xmlns:ns8="http://model.oms.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:operation name="setProjectType" qname="ns9:setProjectType" soapAction="" xmlns:ns9="http://model.oms.com">
+   <ns1:parameter qname="ns9:projectType" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  </ns1:operation>
+  <ns1:operation name="setManagerName" qname="ns10:setManagerName" soapAction="" xmlns:ns10="http://model.oms.com">
+   <ns1:parameter qname="ns10:managerName" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  </ns1:operation>
+  <ns1:operation name="getManagerName" qname="ns11:getManagerName" returnQName="ns11:getManagerNameReturn" returnType="xsd:string" soapAction="" xmlns:ns11="http://model.oms.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:operation name="setEmployeeName" qname="ns12:setEmployeeName" soapAction="" xmlns:ns12="http://model.oms.com">
+   <ns1:parameter qname="ns12:employeeName" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  </ns1:operation>
+  <ns1:operation name="getEmployeeName" qname="ns13:getEmployeeName" returnQName="ns13:getEmployeeNameReturn" returnType="xsd:string" soapAction="" xmlns:ns13="http://model.oms.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:operation name="setEmployeeId" qname="ns14:setEmployeeId" soapAction="" xmlns:ns14="http://model.oms.com">
+   <ns1:parameter qname="ns14:employeeId" type="xsd:int" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  </ns1:operation>
+  <ns1:operation name="getManagerUnAvail" qname="ns15:getManagerUnAvail" returnQName="ns15:getManagerUnAvailReturn" returnType="xsd:string" soapAction="" xmlns:ns15="http://model.oms.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:operation name="setManagerUnAvail" qname="ns16:setManagerUnAvail" soapAction="" xmlns:ns16="http://model.oms.com">
+   <ns1:parameter qname="ns16:managerUnAvail" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  </ns1:operation>
+  <ns1:operation name="getEmployeeId" qname="ns17:getEmployeeId" returnQName="ns17:getEmployeeIdReturn" returnType="xsd:int" soapAction="" xmlns:ns17="http://model.oms.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:operation name="setManagerId" qname="ns18:setManagerId" soapAction="" xmlns:ns18="http://model.oms.com">
+   <ns1:parameter qname="ns18:managerId" type="xsd:int" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  </ns1:operation>
+  <ns1:operation name="getProjectId" qname="ns19:getProjectId" returnQName="ns19:getProjectIdReturn" returnType="xsd:string" soapAction="" xmlns:ns19="http://model.oms.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:operation name="setProjectId" qname="ns20:setProjectId" soapAction="" xmlns:ns20="http://model.oms.com">
+   <ns1:parameter qname="ns20:projectId" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  </ns1:operation>
+  <ns1:operation name="setDuration" qname="ns21:setDuration" soapAction="" xmlns:ns21="http://model.oms.com">
+   <ns1:parameter qname="ns21:duration" type="xsd:int" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  </ns1:operation>
+  <ns1:operation name="getManagerId" qname="ns22:getManagerId" returnQName="ns22:getManagerIdReturn" returnType="xsd:int" soapAction="" xmlns:ns22="http://model.oms.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:parameter name="allowedMethods" value="setManagerUnAvail setExpCompletionDate getProjectType getExpCompletionDate getManagerName getAssignDate getManagerUnAvail getDuration setDuration setAssignDate setManagerId setEmployeeName setManagerName getManagerId getEmployeeId setProjectId setEmployeeId setShift getShift getEmployeeName setProjectType getProjectId"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
+  <ns1:parameter name="wsdlPortType" value="DisplayWorkAllocationTO"/>
+  <ns1:parameter name="className" value="com.oms.model.DisplayWorkAllocationTO"/>
+  <ns1:parameter name="wsdlServicePort" value="DisplayWorkAllocationTO"/>
+  <ns1:parameter name="schemaQualified" value="http://model.oms.com"/>
+  <ns1:parameter name="wsdlTargetNamespace" value="http://model.oms.com"/>
+  <ns1:parameter name="wsdlServiceElement" value="DisplayWorkAllocationTOService"/>
+ </ns1:service>
+ <ns1:transport name="http">
+  <ns1:requestFlow>
+   <ns1:handler type="URLMapper"/>
+   <ns1:handler type="java:org.apache.axis.handlers.http.HTTPAuthHandler"/>
+  </ns1:requestFlow>
+  <ns1:parameter name="qs:list" value="org.apache.axis.transport.http.QSListHandler"/>
+  <ns1:parameter name="qs:wsdl" value="org.apache.axis.transport.http.QSWSDLHandler"/>
+  <ns1:parameter name="qs.list" value="org.apache.axis.transport.http.QSListHandler"/>
+  <ns1:parameter name="qs.method" value="org.apache.axis.transport.http.QSMethodHandler"/>
+  <ns1:parameter name="qs:method" value="org.apache.axis.transport.http.QSMethodHandler"/>
+  <ns1:parameter name="qs.wsdl" value="org.apache.axis.transport.http.QSWSDLHandler"/>
+ </ns1:transport>
+ <ns1:transport name="local">
+  <ns1:responseFlow>
+   <ns1:handler type="LocalResponder"/>
+  </ns1:responseFlow>
+ </ns1:transport>
+</ns1:deployment>

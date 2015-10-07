@@ -1,0 +1,24 @@
+@CHARSET "ISO-8859-1";
+
+
+div.transbox
+{
+
+  width: 350px;
+  height: 350px;
+  margin: 20px 470px;
+  background-color: #F8F8F8 ; 
+  border: 1px solid black;
+  border-radius: 15px;
+  opacity:0.59;
+  filter:alpha(opacity=59); /* For IE8 and earlier */
+}
+
+div.transbox p
+{
+  margin: 10px 30px;
+  font-weight: bold; 
+  color: #000000;
+}
+
+//#B4CFEC #F0F0F0 transparent #F8F8F8 #c9dbdc #FAFAFA

@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.example.org/OfficeManagementSystemWSDLFile/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="OfficeManagementSystemWSDLFile" targetNamespace="http://www.example.org/OfficeManagementSystemWSDLFile/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.example.org/OfficeManagementSystemWSDLFile/">
+      <xsd:element name="WorkAllocationRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+          	<xsd:element name="EmployeeId" type="xsd:long" />
+          	<xsd:element name="ProjectId" type="xsd:string"></xsd:element>
+          	<xsd:element name="ProjectType" type="xsd:string"></xsd:element>
+          	<xsd:element name="ManagerId" type="xsd:int"></xsd:element>
+          	<xsd:element name="AssignDate" type="xsd:date"></xsd:element>
+          	<xsd:element name="Shift" type="xsd:string"></xsd:element>
+ 	    </xsd:sequence>
+       </xsd:complexType>
+      </xsd:element>
+      
+      <xsd:element name="WorkAllocationResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+          	<xsd:element name="EmployeeID" type="xsd:long" />
+          	<xsd:element name="EmployeeName" type="xsd:string"></xsd:element>
+          	<xsd:element name="ManagerId" type="xsd:int"></xsd:element>
+          	<xsd:element name="ManagerName" type="xsd:string"></xsd:element>
+          	<xsd:element name="ProjectId" type="xsd:string"></xsd:element>
+          	<xsd:element name="ProjectType" type="xsd:string"></xsd:element>
+          	<xsd:element name="AssignDate" type="xsd:date"></xsd:element>
+          	<xsd:element name="ExpectedCompletionDate" type="xsd:date"></xsd:element>
+ 			<xsd:element name="Shift" type="xsd:string"></xsd:element>         
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    
+      <xsd:element name="ResigantionRequest">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="EmployeeId" type="xsd:long"></xsd:element>
+      			<xsd:element name="EmployeeName" type="xsd:string"></xsd:element>
+      			<xsd:element name="EmployementType" type="xsd:string"></xsd:element>
+      			<xsd:element name="ProjectId" type="xsd:string"></xsd:element>
+      			<xsd:element name="ManagerName" type="xsd:string"></xsd:element>
+      			<xsd:element name="DateOfApply" type="xsd:date"></xsd:element>
+      			<xsd:element name="NoticePeriod" type="xsd:int"></xsd:element>
+      			<xsd:element name="Comments" type="xsd:string"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+
+      <xsd:element name="ResigantionResponse">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="Amount" type="xsd:double"></xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+    
+        
+            <xsd:element name="LeaveProcessRequest">
+            	<xsd:complexType>
+            		<xsd:sequence>
+            			<xsd:element name="EmployeeName" type="xsd:string"></xsd:element>
+            			<xsd:element name="EmployeeType" type="xsd:string"></xsd:element>
+            			<xsd:element name="ManagerID" type="xsd:long"></xsd:element>
+            			<xsd:element name="StartDate" type="xsd:date"></xsd:element>
+            			<xsd:element name="EndDate" type="xsd:date"></xsd:element>
+            			<xsd:element name="LeaveType" type="xsd:string"></xsd:element>
+            			<xsd:element name="Reason" type="xsd:string"></xsd:element>
+            			<xsd:element name="KnowledgeTransition" type="xsd:boolean"></xsd:element>
+            		</xsd:sequence>
+            	</xsd:complexType>
+            </xsd:element>
+            
+            <xsd:element name="LeaveProcessResponse">
+            	<xsd:complexType>
+            		<xsd:sequence>
+
+            			<xsd:element name="ValidateLeave" type="xsd:boolean"></xsd:element>
+            		</xsd:sequence>
+            	</xsd:complexType>
+            </xsd:element>
+
+            <xsd:element name="PayrollProcessRequest">
+            	<xsd:complexType>
+            		<xsd:sequence>
+            			<xsd:element name="EmployeeId" type="xsd:long"></xsd:element>
+            			<xsd:element name="Designation" type="xsd:string"></xsd:element>
+            			<xsd:element name="BankName" type="xsd:string"></xsd:element>
+            			<xsd:element name="AccountNo" type="xsd:long"></xsd:element>
+            			<xsd:element name="PolicyNo" type="xsd:int"></xsd:element>
+            			<xsd:element name="PolicyName" type="xsd:string"></xsd:element>
+            		</xsd:sequence>
+            	</xsd:complexType>
+            </xsd:element>
+            <xsd:element name="PayrollProcessResponse">
+            	<xsd:complexType>
+            		<xsd:sequence>
+
+            			<xsd:element name="EmployeeId" type="xsd:string"></xsd:element>
+            			<xsd:element name="Type" type="xsd:string"></xsd:element>
+            			<xsd:element name="BasicSalary" type="xsd:int"></xsd:element>
+            			<xsd:element name="GrossSalary" type="xsd:int"></xsd:element>
+            			<xsd:element name="Deduction" type="xsd:int"></xsd:element>
+            			<xsd:element name="Tax" type="xsd:int"></xsd:element>
+            			<xsd:element name="NetSalary" type="xsd:int"></xsd:element>
+            		</xsd:sequence>
+            	</xsd:complexType>
+            </xsd:element>
+    
+        
+        
+            <xsd:element name="RegistrationRequest">
+            	<xsd:complexType>
+            		<xsd:sequence>
+            			<xsd:element name="EmployeeName" type="xsd:string"></xsd:element>
+            			<xsd:element name="EmailId" type="xsd:string"></xsd:element>
+            			<xsd:element name="Contact" type="xsd:long"></xsd:element>
+            			<xsd:element name="BirthDate" type="xsd:date"></xsd:element>
+            			<xsd:element name="Password" type="xsd:string"></xsd:element>
+            			<xsd:element name="Location" type="xsd:string"></xsd:element>
+            			<xsd:element name="Gender" type="xsd:string"></xsd:element>
+            			<xsd:element name="Experience" type="xsd:int"></xsd:element>
+            			<xsd:element name="HighestQualification" type="xsd:string"></xsd:element>
+            			<xsd:element name="EmployeeType" type="xsd:string"></xsd:element>
+            			<xsd:element name="JoinDate" type="xsd:date"></xsd:element>
+            		</xsd:sequence>
+            	</xsd:complexType>
+            </xsd:element>
+            <xsd:element name="RegistrationResponse">
+            	<xsd:complexType>
+            		<xsd:sequence>
+            			<xsd:element name="EmployeeId" type="xsd:long"></xsd:element>
+            			<xsd:element name="Desigantion" type="xsd:string"></xsd:element>
+            			<xsd:element name="RetirementDate" type="xsd:date"></xsd:element>
+            		</xsd:sequence>
+            	</xsd:complexType>
+            </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  
+  <wsdl:message name="WorkAllocationRequest">
+    <wsdl:part element="tns:WorkAllocationRequest" name="parameters"/>
+  </wsdl:message>
+  
+  <wsdl:message name="WorkAllocationResponse">
+    <wsdl:part element="tns:WorkAllocationResponse" name="parameters"/>
+  </wsdl:message>
+  
+  <wsdl:message name="ResigantionRequest">
+  	<wsdl:part name="parameters" element="tns:ResigantionRequest"></wsdl:part>
+  </wsdl:message>
+ 
+  <wsdl:message name="ResigantionResponse">
+  	<wsdl:part name="parameters" element="tns:ResigantionResponse"></wsdl:part>
+  </wsdl:message>
+  
+  <wsdl:message name="LeaveProcessRequest">
+  	<wsdl:part name="parameters" element="tns:LeaveProcessRequest"></wsdl:part>
+  </wsdl:message>
+ 
+  <wsdl:message name="LeaveProcessResponse">
+ 	<wsdl:part name="parameters" element="tns:LeaveProcessResponse"></wsdl:part>
+  </wsdl:message>
+
+  <wsdl:message name="PayrollProcessRequest">
+  	<wsdl:part name="parameters" element="tns:PayrollProcessRequest"></wsdl:part>
+  </wsdl:message>
+  
+  <wsdl:message name="PayrollProcessResponse">
+  	<wsdl:part name="parameters" element="tns:PayrollProcessResponse"></wsdl:part>
+  </wsdl:message>
+  
+  <wsdl:message name="RegistrationRequest">
+  	<wsdl:part name="parameters" element="tns:RegistrationRequest"></wsdl:part>
+  </wsdl:message>
+  
+  <wsdl:message name="RegistrationResponse">
+  	<wsdl:part name="parameters" element="tns:RegistrationResponse"></wsdl:part>
+  </wsdl:message>
+  
+  <wsdl:portType name="OfficeManagementSystemWSDLFile">
+    
+    <wsdl:operation name="WorkAllocation">
+      <wsdl:input message="tns:WorkAllocationRequest"/>
+      <wsdl:output message="tns:WorkAllocationResponse"/>
+    </wsdl:operation>
+
+    <wsdl:operation name="Resigantion">
+    	<wsdl:input message="tns:ResigantionRequest"></wsdl:input>
+    	<wsdl:output message="tns:ResigantionResponse"></wsdl:output>
+    </wsdl:operation>
+    
+    <wsdl:operation name="LeaveProcess">
+    	<wsdl:input message="tns:LeaveProcessRequest"></wsdl:input>
+    	<wsdl:output message="tns:LeaveProcessResponse"></wsdl:output>
+    </wsdl:operation>
+
+    <wsdl:operation name="PayrollProcess">
+    	<wsdl:input message="tns:PayrollProcessRequest"></wsdl:input>
+    	<wsdl:output message="tns:PayrollProcessResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Registration">
+    	<wsdl:input message="tns:RegistrationRequest"></wsdl:input>
+    	<wsdl:output message="tns:RegistrationResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  
+  <wsdl:binding name="OfficeManagementSystemWSDLFileSOAP" type="tns:OfficeManagementSystemWSDLFile">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    
+    <wsdl:operation name="WorkAllocation">
+      <soap:operation soapAction="http://www.example.org/OfficeManagementSystemWSDLFile/WorkAllocation"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    
+    <wsdl:operation name="Resigantion">
+      <soap:operation soapAction="http://www.example.org/OfficeManagementSystemWSDLFile/Resigantion"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    
+    <wsdl:operation name="LeaveProcess">
+      <soap:operation soapAction="http://www.example.org/OfficeManagementSystemWSDLFile/LeaveProcess"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+   
+    <wsdl:operation name="PayrollProcess">
+      <soap:operation soapAction="http://www.example.org/OfficeManagementSystemWSDLFile/PayrollProcess"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+   
+    <wsdl:operation name="Registration">
+      <soap:operation soapAction="http://www.example.org/OfficeManagementSystemWSDLFile/Registration"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  
+  <wsdl:service name="OfficeManagementSystemWSDLFile">
+    <wsdl:port binding="tns:OfficeManagementSystemWSDLFileSOAP" name="OfficeManagementSystemWSDLFileSOAP">
+      <soap:address location="http://localhost:8089/OfficeManagementSystem"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
